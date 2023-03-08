@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira - SaveFlowers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="div_box_calculadora">
+        <div id="div_titulo">Calculadora Financeira</div>
+        <div id="div_calculadora">
+            <div id="div_ipt1">
+                Quantos kilos de rosas a sua empresa transporta por ano:<br>
+                <input type="number" id="ipt_quant_rosas">
+            </div>
+            <div id="div_ipt2">
+                Qual sua margem de lucro por kilo de rosas:<br>
+                <input type="number" id="ipt_lucro_rosas">
+            </div>
+            <button onclick="calcular()">Descobrir Perdas e Ganhos</button>
+            <div id="div_box_resultado">
+                <div id="div_resul"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function calcular(){
+        var quantRosas = Number(ipt_quant_rosas.value);
+        var lucroKgRosas = Number(ipt_lucro_rosas.value);
+
+        var lucroAnoRosas = quantRosas * lucroKgRosas;
+        var quantRosasPerdidas = quantRosas * 40 / 100;
+        var valorRosasPerdidas = quantRosasPerdidas * lucroKgRosas;
+
+        var lucroComSistema = valorRosasPerdidas * 50 / 100;
+
+        div_resul.innerHTML = `<p>Atualmente a sua empresa tem por ano um <b>lucro médio de R$${lucroAnoRosas}</b>, sabendo que em média 40% das rosas são degradadas ou perdidas durante transporte <b style="color: red;">você está deichando de lucrar R$${valorRosasPerdidas}</b>.</p>
+        <p><b>Com a SaveFlowers</b>, que é o nosso sistema de monitoramento de temperatura e umidade nos transportes e seguindo todos os passos para o um controle adequado <b>você poderá diminuir essa perda em no minimo 50%</b>, que seria <b>cerca de R$${lucroComSistema}</b>.</p>`
+    }
+</script>

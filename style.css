@@ -1,0 +1,68 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url(https://img.freepik.com/vetores-gratis/fundo-de-folhas-rosa-aquarela_79603-1830.jpg?w=2000);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+#div_box_calculadora {
+    width: 450px;
+    height: fit-content;
+    background-color: #fcdde2;
+    border-radius: 20px;
+    border: solid 3px;
+}
+
+#div_titulo {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+    padding-bottom: 5px;
+    border-bottom: solid 2px;
+}
+
+#div_calculadora {
+    max-width: 100%;
+    margin: 15px;
+}
+
+input {
+    width: 100%;
+    height: 25px;
+    border: solid 1px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+}
+
+button {
+    width: 102%;
+    height: 30px;
+    background-color: #fd748b;
+    border: solid 1px #fd748b;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+button:hover {
+    height: 32px;
+    background-color: #f85d77;
+}
+
+p{
+    font-size: 17px;
+}
